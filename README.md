@@ -19,13 +19,13 @@ python test.py
 - 回路を組む都合でLEDの配線と座標系がぐちゃぐちゃになってしまったので無理やり補正した
     ```cpp
     uint8_t getLayerBitDensity(uint8_t data[64], uint8_t index, uint8_t density){
-  switch(index){
-    case 0:
-      return ((data[63]>density)<<7 | (data[62]>density)<<6 | (data[59]>density)<<5 | (data[58]>density)<<4 | (data[55]>density)<<3 | (data[54]>density)<<2 | (data[50]>density)<<1 | (data[51]>density));
-    case 1:
-      return ((data[47]>density)<<7 | (data[46]>density)<<6 | (data[43]>density)<<5 | (data[42]>density)<<4 | (data[39]>density)<<3 | (data[38]>density)<<2 | (data[34]>density)<<1 | (data[35]>density));
-    case 2:
-      return ((data[31]>density)<<7 | (data[30]>density)<<6 | (data[27]>density)<<5 | (data[26]>density)<<4 | (data[23]>density)<<3 | (data[22]>density)<<2 | (data[18]>density)<<1 | (data[19]>density));
+        switch(index){
+            case 0:
+                return ((data[63]>density)<<7 | (data[62]>density)<<6 | (data[59]>density)<<5 | (data[58]>density)<<4 | (data[55]>density)<<3 | (data[54]>density)<<2 | (data[50]>density)<<1 | (data[51]>density));
+            case 1:
+                return ((data[47]>density)<<7 | (data[46]>density)<<6 | (data[43]>density)<<5 | (data[42]>density)<<4 | (data[39]>density)<<3 | (data[38]>density)<<2 | (data[34]>density)<<1 | (data[35]>density));
+            case 2:
+                return ((data[31]>density)<<7 | (data[30]>density)<<6 | (data[27]>density)<<5 | (data[26]>density)<<4 | (data[23]>density)<<3 | (data[22]>density)<<2 | (data[18]>density)<<1 | (data[19]>density));
     ....
     ```
 
